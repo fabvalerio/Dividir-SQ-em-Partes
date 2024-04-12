@@ -1,10 +1,10 @@
-﻿
+
 
 
 <img src="logo.png">
 
 
-# Dividir-SQL (DADOS) em Partes via Python
+# Dividir-SQL (DADOS)-em-Partes via Python
 
 O script `split_sql_file.py` é projetado para dividir um arquivo SQL grande em partes menores com base em instruções de inserção (`INSERT INTO`). Aqui está um resumo de como ele funciona:
 
@@ -43,9 +43,11 @@ Este manual descreve como dividir um grande arquivo SQL em partes menores e, pos
 1. **Preparação** : Certifique-se de que o arquivo SQL que deseja dividir esteja acessível e você saiba o caminho até ele.
 2. **Execução do Script de Divisão** :
 
-* Execute o script `split_sql_file.py`.
-* Quando solicitado, informe o caminho completo do arquivo SQL que deseja dividir.
-* Informe o diretório de saída onde os arquivos divididos serão salvos. Se o diretório não existir, ele será criado.
+* Execute o script, informe o caminho completo do arquivo SQL que deseja dividir e o diretório
+  ```
+  python .\split_sql_file.py dir\arquivo.sql dir\saida
+  ```
+* Se o diretório não existir, ele será criado.
 
 1. **Verificação** : Navegue até o diretório de saída especificado. Você encontrará vários arquivos nomeados como `part_{número}.sql`, representando partes do arquivo original.
 
@@ -54,7 +56,10 @@ Este manual descreve como dividir um grande arquivo SQL em partes menores e, pos
 1. **Preparação** : Tenha em mãos o diretório contendo os arquivos SQL divididos e decida sobre o tamanho máximo em MB para cada arquivo agrupado.
 2. **Execução do Script de Agrupamento** :
 
-* Execute o script `group_sql_files.py`.
+* Execute o script
+  ```
+  python .\group_sql_files.py
+  ```
 * Quando solicitado, informe o diretório de entrada (onde estão os arquivos SQL divididos).
 * Informe o diretório de saída onde os arquivos agrupados serão salvos. Se o diretório não existir, ele será criado.
 * Informe o tamanho máximo em MB para cada arquivo de saída. Este valor deve levar em conta as limitações de upload que você deseja contornar.
